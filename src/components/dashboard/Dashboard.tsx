@@ -105,7 +105,7 @@ const Dashboard: React.FC = () => {
                         {activity.type === 'accountCreated' 
                           ? t('dashboard.accountCreated')
                           : activity.type === 'platformLinked'
-                            ? `${t('dashboard.platformLinked')}: ${activity.platform}`
+                            ? `${t('dashboard.platformLinked')}: ${(activity as {platform: string}).platform}`
                             : activity.type}
                       </div>
                       <div className="text-sm text-gray-500">
